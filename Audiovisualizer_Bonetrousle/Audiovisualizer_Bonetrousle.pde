@@ -5,8 +5,10 @@ import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 
+PImage img;
+
 int canvasWidth = 1080;
-int canvasHeight = 1080;
+int canvasHeight = 540;
 
 String audioFileName = "Undertale - Bonetrousle.mp3";
 
@@ -33,5 +35,11 @@ void settings()
 
 void setup()
 {
-  
+  img = loadImage("Bone.png");
+}
+
+void draw()
+{
+  background(0,0,0);
+  image(img, 0, 0);
 }

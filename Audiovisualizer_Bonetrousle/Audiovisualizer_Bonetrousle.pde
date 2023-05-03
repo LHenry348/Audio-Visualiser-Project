@@ -14,8 +14,10 @@ int canvasHeight = 540;
 
 String audioFileName = "Undertale - Bonetrousle.mp3";
 
-float fps = 30;
+float fps = 60;
 float smoothingFactor = 0.25;
+
+
 
 AudioPlayer track;
 FFT fft;
@@ -28,6 +30,11 @@ float[] sum = new float[bands];
 float unit;
 int groundLineY;
 PVector center;
+
+float random1 = random(height, height / 2);
+float random2 = random(height, height / 3);
+float random3 = random(height, height / 3);
+float random4 = random(height, height / 2);
 
 void settings() 
 {
@@ -64,10 +71,10 @@ void draw()
 {
   background(BoneBG);
   imageMode(CORNER);
-  image(Bone, 20, height - 10);
-  image(Bone, 273, height - 10);
-  image(Bone, 526, height - 10);
-  image(Bone, 779, height - 10);
+  image(Bone, 20, random(height / 2, height));
+  image(Bone, 273, random(height / 3, height));
+  image(Bone, 526,  random(height / 3, height));
+  image(Bone, 779, random(height / 2, height));
   imageMode(CENTER);
   image(Papyrus, 540, 270); 
   

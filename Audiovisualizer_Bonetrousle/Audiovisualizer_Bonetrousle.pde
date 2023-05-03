@@ -5,7 +5,9 @@ import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 
-PImage img;
+PImage Bone;
+PImage BoneBG;
+PImage Papyrus;
 
 int canvasWidth = 1080;
 int canvasHeight = 540;
@@ -51,13 +53,16 @@ void setup() {
  
   fft.linAverages(bands);
   
-  img = loadImage("Bone.png");
+  Bone = loadImage("BoneAttacks.png");
+  BoneBG = loadImage("BoneBG.png");
+  Papyrus = loadImage("Papyrus");
  
   // track.cue(60000); // Cue in milliseconds
 } 
 
 void draw()
 {
-  background(0,0,0);
-  image(img, 0, 0);
+  background(BoneBG);
+  image(Bone, height, 0);
+  
 }

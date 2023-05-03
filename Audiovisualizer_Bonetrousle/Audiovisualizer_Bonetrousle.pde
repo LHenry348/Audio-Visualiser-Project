@@ -55,7 +55,7 @@ void setup() {
   
   Bone = loadImage("BoneAttacks.png");
   BoneBG = loadImage("BoneBG.png");
-  Papyrus = loadImage("Papyrus");
+  Papyrus = loadImage("Papyrus.png");
  
   // track.cue(60000); // Cue in milliseconds
 } 
@@ -63,6 +63,12 @@ void setup() {
 void draw()
 {
   background(BoneBG);
-  image(Bone, height, 0);
+  imageMode(CORNER);
+  image(Bone, 20, height - 10);
+  image(Bone, 273, height - 10);
+  image(Bone, 526, height - 10);
+  image(Bone, 779, height - 10);
+  imageMode(CENTER);
+  image(Papyrus, 540, 270); 
   
 }

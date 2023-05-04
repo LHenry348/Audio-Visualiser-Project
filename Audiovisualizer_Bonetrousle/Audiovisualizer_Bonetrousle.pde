@@ -80,7 +80,11 @@ void draw()
   image(Bone, 779, random(height / 2, height));
   imageMode(CENTER);
   image(Papyrus, 540, 270); 
- 
+  image(Soul, 230, yy);
+  image(Soul, 850, yy);
+  
+  yy += random(-10, 10);
+  yyy = lerp(yyy, yy, 0.1f);
   
 }
 float yyy = 0;

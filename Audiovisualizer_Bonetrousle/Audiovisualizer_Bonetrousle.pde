@@ -8,7 +8,8 @@ import ddf.minim.ugens.*;
 PImage Bone;
 PImage BoneBG;
 PImage Papyrus;
-PImage Soul;
+PImage Heart;
+PImage Board;
 
 int canvasWidth = 1080;
 int canvasHeight = 540;
@@ -40,7 +41,7 @@ float random4 = random(height, height / 2);
 void settings() 
 {
   size(canvasWidth, canvasHeight);
-  smooth(10);
+  smooth(8);
 }
   
 void setup() {
@@ -64,39 +65,21 @@ void setup() {
   Bone = loadImage("BoneAttacks.png");
   BoneBG = loadImage("BoneBG.png");
   Papyrus = loadImage("Papyrus.png");
-  Soul = loadImage("Soul.png");
+  Heart = loadImage("Heart.png");
+  Board = loadImage("BulletBoard.png");
  
   // track.cue(60000); // Cue in milliseconds
 } 
 
-float yy = 150;
-float r = 180;
-float e = 10;
-
 void draw()
 {
   background(BoneBG);
-  image(Soul, 230, yy);
-  image(Soul, 850, yy);
   imageMode(CORNER);
   image(Bone, 20, random(height / 2, height));
-  image(Bone, 273, random(height / 3, height));
-  image(Bone, 526,  random(height / 3, height));
   image(Bone, 779, random(height / 2, height));
   imageMode(CENTER);
-  image(Papyrus, 540, 270); 
+  image(Board, 540, 420);
+  image(Heart, 540, 420);
+  image(Papyrus, 540, 150); 
   
-  
-  yy += random(-10, 10);
-  yyy = lerp(yyy, yy, 0.1f);
-  
-  if(yy > height - r)
-  {
-    yy = +yy;
-  }
-  else if (yy < e)
-  {
-    yy = -yy;
-  }
 }
-float yyy = 0;

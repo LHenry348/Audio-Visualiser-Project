@@ -8,6 +8,7 @@ import ddf.minim.ugens.*;
 PImage Bone;
 PImage BoneBG;
 PImage Papyrus;
+PImage Soul;
 
 int canvasWidth = 1080;
 int canvasHeight = 540;
@@ -63,10 +64,12 @@ void setup() {
   Bone = loadImage("BoneAttacks.png");
   BoneBG = loadImage("BoneBG.png");
   Papyrus = loadImage("Papyrus.png");
+  Soul = loadImage("Soul.png");
  
   // track.cue(60000); // Cue in milliseconds
 } 
 
+float yy = 150;
 void draw()
 {
   background(BoneBG);
@@ -77,5 +80,7 @@ void draw()
   image(Bone, 779, random(height / 2, height));
   imageMode(CENTER);
   image(Papyrus, 540, 270); 
+ 
   
 }
+float yyy = 0;

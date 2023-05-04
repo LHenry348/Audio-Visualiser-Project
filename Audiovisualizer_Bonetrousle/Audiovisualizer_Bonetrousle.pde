@@ -39,7 +39,7 @@ float random4 = random(height, height / 2);
 void settings() 
 {
   size(canvasWidth, canvasHeight);
-  smooth(8);
+  smooth(10);
 }
   
 void setup() {

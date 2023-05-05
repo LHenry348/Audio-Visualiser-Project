@@ -43,7 +43,7 @@ void setup() {
   
   fft = new FFT(track.bufferSize(), track.sampleRate());
   
-  Bone = loadImage("BoneAttacks.png");
+  Bone = loadImage("BoneAttack.png");
   BoneBG = loadImage("BoneBG.png");
   Papyrus = loadImage("Papyrus.png");
   Heart = loadImage("Heart.png");
@@ -57,17 +57,199 @@ void draw()
 {
   background(BoneBG);
   
+  fill(0);
+  imageMode(CORNER);
   pushMatrix();
-
-  
-   // draw the line for frequency band i, scaling it by 4 so we can see it a bit better
-   fill(0);
-   imageMode(CORNER);
-   translate(0, - fft.getBand(1) - 100);
-   image(Bone, 20, height - 80);
-   image(Bone, 779, height - 80);
-  
+  translate(0, - fft.getBand(1) - 100);
+  image(Bone, 20, height - 80);
   popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(3) - 100);
+  image(Bone, 35, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(5) - 100);
+  image(Bone, 50, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(4) - 100);
+  image(Bone, 65, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(9) - 100);
+  image(Bone, 80, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(4) - 100);
+  image(Bone, 95, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(8) - 100);
+  image(Bone, 110, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(8) - 100);
+  image(Bone, 125, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(9) - 100);
+  image(Bone, 140, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(10) - 100);
+  image(Bone, 155, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(14) - 100);
+  image(Bone, 170, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(12) - 100);
+  image(Bone, 185, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(16) - 100);
+  image(Bone, 200, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(2) - 100);
+  image(Bone, 215, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(12) - 100);
+  image(Bone, 230, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(6) - 100);
+  image(Bone, 245, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(4) - 100);
+  image(Bone, 260, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(2) - 100);
+  image(Bone, 275, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(6) - 100);
+  image(Bone, 290, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(2) - 100);
+  image(Bone, 780, height - 80);  
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(7) - 100);
+  image(Bone, 795, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(5) - 100);
+  image(Bone, 810, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(4) - 100);
+  image(Bone, 825, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(9) - 100);
+  image(Bone, 840, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(4) - 100);
+  image(Bone, 855, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(9) - 100);
+  image(Bone, 870, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(8) - 100);
+  image(Bone, 885, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(9) - 100);
+  image(Bone, 900, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(10) - 100);
+  image(Bone, 915, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(4) - 100);
+  image(Bone, 930, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(12) - 100);
+  image(Bone, 945, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(6) - 100);
+  image(Bone, 960, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(7) - 100);
+  image(Bone, 975, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(12) - 100);
+  image(Bone, 990, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(6) - 100);
+  image(Bone, 1105, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(3) - 100);
+  image(Bone, 1120, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(6) - 100);
+  image(Bone, 1135, height - 80);
+  popMatrix();
+  
+  pushMatrix();
+  translate(0, - fft.getBand(3) - 100);
+  image(Bone, 1150, height - 80);
+  popMatrix();
+  
+  
   
   fft.forward(track.mix);
   track.play();

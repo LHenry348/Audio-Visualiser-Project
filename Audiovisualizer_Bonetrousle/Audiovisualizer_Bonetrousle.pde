@@ -59,48 +59,34 @@ void draw()
   
   fill(0);
   imageMode(CORNER);
-  pushMatrix();
-  translate(0, - fft.getBand(1) - 100);
-  image(Bone, 20, height - 80);
-  popMatrix();
   
   pushMatrix();
-  translate(0, - fft.getBand(3) - 100);
-  image(Bone, 35, height - 80);
-  popMatrix();
-  
-  pushMatrix();
-  translate(0, - fft.getBand(5) - 100);
-  image(Bone, 50, height - 80);
-  popMatrix();
-  
-  pushMatrix();
-  translate(0, - fft.getBand(4) - 100);
+  translate(0, - fft.getBand(70) - 100);
   image(Bone, 65, height - 80);
   popMatrix();
   
   pushMatrix();
-  translate(0, - fft.getBand(9) - 100);
+  translate(0, - fft.getBand(30) - 100);
   image(Bone, 80, height - 80);
   popMatrix();
   
   pushMatrix();
-  translate(0, - fft.getBand(4) - 100);
+  translate(0, - fft.getBand(20) - 100);
   image(Bone, 95, height - 80);
   popMatrix();
   
   pushMatrix();
-  translate(0, - fft.getBand(8) - 100);
+  translate(0, - fft.getBand(13) - 100);
   image(Bone, 110, height - 80);
   popMatrix();
   
   pushMatrix();
-  translate(0, - fft.getBand(8) - 100);
+  translate(0, - fft.getBand(9) - 100);
   image(Bone, 125, height - 80);
   popMatrix();
   
   pushMatrix();
-  translate(0, - fft.getBand(9) - 100);
+  translate(0, - fft.getBand(11) - 100);
   image(Bone, 140, height - 80);
   popMatrix();
   
@@ -125,37 +111,39 @@ void draw()
   popMatrix();
   
   pushMatrix();
-  translate(0, - fft.getBand(2) - 100);
+  translate(0, - fft.getBand(8) - 100);
   image(Bone, 215, height - 80);
   popMatrix();
   
   pushMatrix();
-  translate(0, - fft.getBand(12) - 100);
+  translate(0, - fft.getBand(6) - 100);
   image(Bone, 230, height - 80);
   popMatrix();
   
   pushMatrix();
-  translate(0, - fft.getBand(6) - 100);
+  translate(0, - fft.getBand(17) - 100);
   image(Bone, 245, height - 80);
   popMatrix();
   
   pushMatrix();
-  translate(0, - fft.getBand(4) - 100);
+  translate(0, - fft.getBand(5) - 100);
   image(Bone, 260, height - 80);
   popMatrix();
   
   pushMatrix();
-  translate(0, - fft.getBand(2) - 100);
+  translate(0, - fft.getBand(90) - 100);
   image(Bone, 275, height - 80);
   popMatrix();
   
   pushMatrix();
-  translate(0, - fft.getBand(6) - 100);
+  translate(0, - fft.getBand(10) - 100);
   image(Bone, 290, height - 80);
   popMatrix();
   
+  ///////////////////////////////////
+  
   pushMatrix();
-  translate(0, - fft.getBand(2) - 100);
+  translate(0, - fft.getBand(20) - 100);
   image(Bone, 780, height - 80);  
   popMatrix();
   
@@ -170,7 +158,7 @@ void draw()
   popMatrix();
   
   pushMatrix();
-  translate(0, - fft.getBand(4) - 100);
+  translate(0, - fft.getBand(8) - 100);
   image(Bone, 825, height - 80);
   popMatrix();
   
@@ -180,7 +168,7 @@ void draw()
   popMatrix();
   
   pushMatrix();
-  translate(0, - fft.getBand(4) - 100);
+  translate(0, - fft.getBand(7) - 100);
   image(Bone, 855, height - 80);
   popMatrix();
   
@@ -205,7 +193,7 @@ void draw()
   popMatrix();
   
   pushMatrix();
-  translate(0, - fft.getBand(4) - 100);
+  translate(0, - fft.getBand(12) - 100);
   image(Bone, 930, height - 80);
   popMatrix();
   
@@ -215,7 +203,7 @@ void draw()
   popMatrix();
   
   pushMatrix();
-  translate(0, - fft.getBand(6) - 100);
+  translate(0, - fft.getBand(20) - 100);
   image(Bone, 960, height - 80);
   popMatrix();
   
@@ -223,32 +211,6 @@ void draw()
   translate(0, - fft.getBand(7) - 100);
   image(Bone, 975, height - 80);
   popMatrix();
-  
-  pushMatrix();
-  translate(0, - fft.getBand(12) - 100);
-  image(Bone, 990, height - 80);
-  popMatrix();
-  
-  pushMatrix();
-  translate(0, - fft.getBand(6) - 100);
-  image(Bone, 1105, height - 80);
-  popMatrix();
-  
-  pushMatrix();
-  translate(0, - fft.getBand(3) - 100);
-  image(Bone, 1120, height - 80);
-  popMatrix();
-  
-  pushMatrix();
-  translate(0, - fft.getBand(6) - 100);
-  image(Bone, 1135, height - 80);
-  popMatrix();
-  
-  pushMatrix();
-  translate(0, - fft.getBand(3) - 100);
-  image(Bone, 1150, height - 80);
-  popMatrix();
-  
   
   
   fft.forward(track.mix);

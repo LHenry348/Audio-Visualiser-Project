@@ -38,7 +38,8 @@ void setup() {
   
   minim = new Minim(this);
   track = minim.loadFile(audioFileName, 2048);
-
+  
+  track.play();
   track.loop();
   
   fft = new FFT(track.bufferSize(), track.sampleRate());
@@ -52,6 +53,21 @@ void setup() {
   boneHeight = height + 100;
 
 } 
+
+void keyPressed()
+{
+  if (key == ' ')
+  {
+    if (track.isPlaying())
+    {
+      track.pause();
+    }
+    else
+    {
+      track.play();
+    }
+  }
+}
 
 void draw()
 {
@@ -214,7 +230,7 @@ void draw()
   
   
   fft.forward(track.mix);
-  track.play();
+  
   
   fft.forward(track.left);
  

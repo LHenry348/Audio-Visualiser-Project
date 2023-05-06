@@ -10,6 +10,7 @@ FFT fft;
 Minim minim;
 
 AudioPlayer track;
+AudioBuffer ab;
 
 float boneHeight;
 
@@ -21,6 +22,10 @@ PImage Board;
 
 int canvasWidth = 1080;
 int canvasHeight = 540;
+
+int bufferSize = 2048;
+float lerpedAverage = 0;
+float[] lerpedBuffer = new float[bufferSize];
 
 String audioFileName = "Undertale - Bonetrousle.mp3";
 
@@ -38,6 +43,7 @@ void setup() {
   
   minim = new Minim(this);
   track = minim.loadFile(audioFileName, 2048);
+  ab = track.mix;
   
   track.play();
   track.loop();
@@ -51,7 +57,7 @@ void setup() {
   Board = loadImage("BulletBoard.png");
   
   boneHeight = height + 100;
-
+ 
 } 
 
 void keyPressed()
@@ -71,6 +77,17 @@ void keyPressed()
 
 void draw()
 {
+  float half = height / 2;
+  float total = 0;
+  for (int i = 0; i < ab.size(); i ++)
+  {
+    total += abs(ab.get(i));
+    float c = map(i, 0, ab.size(), 0, 255);
+    stroke(c, 255, 255);
+    lerpedBuffer[i] = lerp(lerpedBuffer[i], ab.get(i), 01.f);
+    line (i, half, i, half + (lerpedBuffer[i] * half * 4));
+    //line (i, half, i, half + ab.get(i) * half);
+  }
   background(BoneBG);
   
   fill(0);
@@ -226,16 +243,20 @@ void draw()
   pushMatrix();
   translate(0, - fft.getBand(7) - 100);
   image(Bone, 975, height - 80);
-  popMatrix();
-  
+  popMatrix();  
   
   fft.forward(track.mix);
   
-  
   fft.forward(track.left);
- 
+  
   imageMode(CENTER);
   image(Board, 540, 420);
-  image(Heart, 540, 420);
+  float average = total / (float) ab.size();
+  lerpedAverage = lerp(lerpedAverage, average, 0.1f);
+  
+  float radius = 50 + (lerpedAverage * 200);
+  fill(255);
+  circle(width/2, 200, radius);
+  image(Heart, 540, 420, radius, radius);
   image(Papyrus, 540, 150); 
 }
